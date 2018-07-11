@@ -12,19 +12,19 @@ var longestPalindrome = function(s) {
         start = 0;
 
     for(var i = 0; i < size; i = i + 0.5){
-        left = Math.ceil(i - 1);
-        right = Math.floor(i + 1);
+        left = Math.ceil(i - 1)
+        right = Math.floor(i + 1)
         while(left >=0 && right < size) {
             if (a[left] === a[right]){
-                left--;
-                right++;
-            } else { break;}
+                left--
+                right++
+            } else { break}
         }
         if (right - left - 1 > max){
-            max = right - left - 1;
-            start = left + 1;
+            max = right - left - 1
+            start = left + 1
         }
     }
 
-    return s.slice(start, start + max);
+    return s.slice(start, start + max)
 };
