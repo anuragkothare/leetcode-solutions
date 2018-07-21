@@ -44,7 +44,7 @@ var longestPalindrome = function(s) {
 };
 
 
-//  To find string is palindrome.
+//  Function To find string is palindrome.
 
 var isPalindrome = (str) => {
     var a = str.split('')
