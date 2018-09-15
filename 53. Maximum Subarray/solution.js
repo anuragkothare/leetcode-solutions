@@ -46,4 +46,19 @@ var prefixSum =function(arr, start, end) {
 
 
 // O(n) Solution
+var maxSubArray = function(nums) {
+  var maxn = -Number.MAX_VALUE;
+  var sum = 0
 
+  for(num of nums) {
+      sum += num
+      if(sum > maxn) {
+          maxn = sum
+      }
+      if(sum < 0) {
+          sum = 0
+      }
+
+  }
+    return maxn
+}
