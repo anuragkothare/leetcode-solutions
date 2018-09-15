@@ -26,3 +26,28 @@ var inorderTraversal = function(root) {
     }
     return order;
 };
+
+
+// Iterative Solution
+
+/**
+ * @param {TreeNode} root
+ * @returns {number[]}
+ */
+var inorderTraversal = function(root) {
+    var stack = [],
+        result = [],
+        cur;
+    cur = root;
+    while (stack.length > 0 || cur !== null) {
+        if (cur !== null) {
+            stack.push(cur);
+            cur = cur.left;
+        } else {
+            cur = stack.pop();
+            result.push(cur.val);
+            cur = cur.right;
+        }
+    }
+    return result;
+};
